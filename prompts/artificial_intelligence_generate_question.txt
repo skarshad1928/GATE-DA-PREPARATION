@@ -1,0 +1,34 @@
+Generate one original GATE DA-style MCQ for the following practice request.
+
+Section: {section}
+Topic: {topic}
+Requested difficulty: {difficulty}
+Session number: {session}
+Question number: {question_number}
+Requested question style / focus tags: {exam_patterns}
+Question style mode: {company_level}
+
+Student performance snapshot:
+- Recent accuracy: {recent_accuracy}
+- Strong topics: {strong_topics}
+- Weak topics: {weak_topics}
+
+Recently generated questions to avoid repeating:
+{recent_question_summaries}
+
+Generation instructions:
+- Keep the question strictly aligned with the AI section of the GATE DA syllabus and the
+  requested topic "{topic}".
+- Make the question appropriate for {difficulty} difficulty, calibrated to GATE DA's own
+  difficulty curve for this section.
+- If "Question style mode" is "GATE PYQ Style", write the question the way an actual GATE DA
+  paper would phrase it (formal, exam-register language).
+- If it is "Conceptual Deep-Dive", prioritize a question that tests *why*, not just *what*.
+- If it is "Numerical / Computation Heavy", ensure the question requires an actual calculation
+  to reach the answer.
+- If it is "Speed Round", keep the question solvable in well under a minute once the concept is known.
+- Set question_type to "MCQ".
+- Use concise but complete solution steps.
+- If no formula is required, return an empty array for formula_used.
+- Use tags that help with analytics and topic tracking (include the subtopic name as a tag).
+- Return only schema-valid JSON.

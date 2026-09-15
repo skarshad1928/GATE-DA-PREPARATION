@@ -1,0 +1,111 @@
+{
+  "type": "object",
+  "properties": {
+    "exam_patterns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "company_level": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "subtopic": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["Easy", "Medium", "Hard"]
+    },
+    "question_type": {
+      "type": "string",
+      "enum": ["MCQ"]
+    },
+    "question": {
+      "type": "string"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "A": {
+          "type": "string"
+        },
+        "B": {
+          "type": "string"
+        },
+        "C": {
+          "type": "string"
+        },
+        "D": {
+          "type": "string"
+        }
+      },
+      "required": ["A", "B", "C", "D"]
+    },
+    "correct_answer": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D"]
+    },
+    "correct_option_text": {
+      "type": "string"
+    },
+    "solution": {
+      "type": "string"
+    },
+    "shortcut": {
+      "type": "string"
+    },
+    "formula_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "common_mistakes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_time_seconds": {
+      "type": "integer",
+      "minimum": 15
+    },
+    "marks": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "exam_patterns",
+    "company_level",
+    "section",
+    "topic",
+    "subtopic",
+    "difficulty",
+    "question_type",
+    "question",
+    "options",
+    "correct_answer",
+    "correct_option_text",
+    "solution",
+    "shortcut",
+    "formula_used",
+    "common_mistakes",
+    "expected_time_seconds",
+    "marks",
+    "tags"
+  ]
+}
